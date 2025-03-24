@@ -28,11 +28,54 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+}
+
+.mystery-card.flipped {
+    transition: transform 0.5s;
+    transform: rotateY(180deg);
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.back {
+    img {
+        width: 255px;
+        height: 355px;
+    }
+}
+
+.number {
+    font-family: cursive;
+    font-size: 20px;
+    color: aquamarine;
+    background-color: black;
+    border-radius: 4px;
+    border: double gold 5px;
 }
 
 .output {
-    background-color: limegreen;
+    background-color: rgb(7, 142, 7);
     border: solid 3px lime;
     text-align: center;
-    color: aliceblue
+
+    color: aliceblue;
+
+    p {
+        text-shadow: 2px 2px black
+    }
+}
+
+.user-input {
+    margin: 1em;
+    text-align: center;
+
+    button {
+        margin: .10em;
+        font-size: large;
+    }
 }
